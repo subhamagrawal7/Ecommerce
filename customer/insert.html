@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <form action="./php/insert.php" method="post">
+      Enter Customer Id:<input
+        type="number"
+        name="custid"
+        placeholder="Customer ID"
+      /><br />
+      Enter First Name:<input
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+      /><br />
+      Enter Last Name:<input
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+      /><br />
+      Enter Address:<input
+        type="text"
+        name="address"
+        placeholder="Address"
+      /><br />
+      Enter City:<input type="text" name="city" placeholder="City" /><br />
+      Enter State:<input type="text" name="state" placeholder="State" /><br />
+      Enter Phone No:<input
+        type="number"
+        name="phone"
+        placeholder="Phone number"
+      /><br />
+      Enter Email:<input type="email" name="email" placeholder="Email" /><br />
+      <button type="Submit" name="submit" onclick="clickAlert()">ADD</button>
+      <script>
+        function clickAlert() {
+          alert("The Data has been added!");
+        }
+      </script>
+    </form>
+  </body>
+</html>

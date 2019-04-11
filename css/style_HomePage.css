@@ -1,0 +1,65 @@
+/* Float Shadow */
+#hvr-float-shadow {
+  display: inline-block;
+  transition-duration: 0.1s;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+#hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  transform: translateY(-10px);
+  padding-top: -10px;
+}
+
+.dropdown{
+  float: left;
+  padding-top: -10px;
+  display: block;
+}
+
+#first{
+  padding-left: 20%;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-image: linear-gradient(white, skyblue);
+  border-radius: 25px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+#heading{
+  font-size: 20px;
+  font-weight: bold;
+  align-content: center;
+}
+
+.nav{
+  background-image: linear-gradient(white, skyblue);
+}
+
+.login{
+  float: right;
+  font-size: 20px;
+  height: 30px;
+  width: 100px;
+}
+
+.dropdown-content a:hover {background-color: #bbbb;
+border-radius: 25px;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
