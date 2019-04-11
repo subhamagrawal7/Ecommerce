@@ -1,5 +1,5 @@
 <?php
-//   include_once 'php/dbh.php';
+
 include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
 
   error_reporting(E_ALL & ~E_NOTICE);
@@ -62,7 +62,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
             {$output .= "<td>".htmlentities($row['Email']). "</td>";}
           $str = '<a href="">Delete</a>';
           $ID = $row['Cust_ID'];
-          $output .= "<td>"."<a href='./deleteSuccess.php?id=$ID'>Delete</a>"."</td>";
+          $output .= "<td>"."<a href='./updateSingle.php?id=$ID'>Edit</a>"."</td>";
           $output .= "</tr>";
         }
   $output .= "</table>";
