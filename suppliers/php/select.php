@@ -22,11 +22,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
 
   error_reporting(E_ALL & ~E_NOTICE);
 
-  $sql = 'SELECT * FROM customers';
+  //$query = $_POST['query'];
+  $sql = 'SELECT * FROM suppliers';
   $result = mysqli_query($conn, $sql);
 
   $output = "";
-  $output .= "<div class='container'><h1 class='display-1'>DELETE Customer...</h1>
+  $output .= "<div class='container'><h1 class='display-1'>ALL Supplier...</h1>
   <br><table class='table table-hover'><thead class='thead-light'>";
 
   $temp = 1;
@@ -36,8 +37,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
           while($temp)
           {
           $output .= "<tr>";
-          if ($row['Cust_ID'] != NULL)
-          {$output .= "<th scope='col'>".'CUST_ID'. "</th>";}
+          if ($row['Suppl_ID'] != NULL)
+          {$output .= "<th scope='col'>".'SUPPL_ID'. "</th>";}
           if ($row['First_name'] != NULL)
           {$output .= "<th scope='col'>".'First Name'. "</th>";}
           if ($row['Last_name'] != NULL)
@@ -52,7 +53,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
           {$output .= "<th scope='col'>".'Phone'. "</th>";}
           if ($row['Email'] != NULL)
           {$output .= "<th scope='col'>".'Email'. "</th>";}
-          $output .=  "<th scope='col'>".'Delete'."</th>";
           $output .= "</tr>";
           $temp = 0;
         }
@@ -63,8 +63,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
   while ($row = mysqli_fetch_assoc($result))
         {
           $output .= "<tr>";
-          if ($row['Cust_ID'] != NULL)
-            {$output .= "<th scope='row'>".htmlentities($row['Cust_ID']). "</th>";}
+          if ($row['Suppl_ID'] != NULL)
+            {$output .= "<th scope='row'>".htmlentities($row['Suppl_ID']). "</th>";}
           if ($row['First_name'] != NULL)
             {$output .= "<td>".htmlentities($row['First_name']). "</td>";}
           if ($row['Last_name'] != NULL)
@@ -79,19 +79,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
             {$output .= "<td>".htmlentities($row['Phone']). "</td>";}
           if ($row['Email'] != NULL)
             {$output .= "<td>".htmlentities($row['Email']). "</td>";}
-          $str = '<a href="">Delete</a>';
-          $ID = $row['Cust_ID'];
-          $output .= "<td>"."<a href='./deleteSuccess.php?id=$ID'>Delete</a>"."</td>";
           $output .= "</tr>";
         }
-  $output .= "</tbody></table><br><form action='../customer_HomePage.html'>
+  $output .= "</tbody></table><br><form action='../supplier_HomePage.html'>
   <div class='form-group row'>
     <div class='col-sm-10'>
-      <button type='submit' class='btn btn-primary' name='return' onclick='../customer_HomePage.html'>Return</button>
+      <button type='submit' class='btn btn-primary' name='return' onclick='../supplier_HomePage.html'>Return</button>
     </div>
   </div>
 </form></div>";
   echo $output;
 
 ?>
-
