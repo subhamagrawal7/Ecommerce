@@ -12,5 +12,5 @@
   $sql = "INSERT INTO suppliers(Suppl_ID, First_name, Last_name, Address, City, State, Phone, Email) VALUES ('$supplid', '$firstname', '$lastname', '$address', '$city', '$state', '$phone', '$email');";
   $result = mysqli_query($conn, $sql);
   
-  header("Location: /Ecommerce/suppliers/supplier_HomePage.html");
+  header("Location: /Ecommerce/suppliers/supplier.html");
 ?>

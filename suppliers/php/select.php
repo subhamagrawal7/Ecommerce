@@ -81,10 +81,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
             {$output .= "<td>".htmlentities($row['Email']). "</td>";}
           $output .= "</tr>";
         }
-  $output .= "</tbody></table><br><form action='../supplier_HomePage.html'>
+  $output .= "</tbody></table><br><form action='../supplier.html'>
   <div class='form-group row'>
     <div class='col-sm-10'>
-      <button type='submit' class='btn btn-primary' name='return' onclick='../supplier_HomePage.html'>Return</button>
+      <button type='submit' class='btn btn-primary' name='return' onclick='../supplier.html'>Return</button>
     </div>
   </div>
 </form></div>";
