@@ -85,10 +85,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
           $output .= "<td>"."<a href='./updateSingle.php?id=$ID'>Edit</a>"."</td>";
           $output .= "</tr>";
         }
-  $output .= "</tbody></table><br><form action='../customer_HomePage.html'>
+  $output .= "</tbody></table><br><form action='../customer.html'>
   <div class='form-group row'>
     <div class='col-sm-10'>
-      <button type='submit' class='btn btn-primary' name='return' onclick='../customer_HomePage.html'>Return</button>
+      <button type='submit' class='btn btn-primary' name='return' onclick='../customer.html'>Return</button>
     </div>
   </div>
 </form></div>";

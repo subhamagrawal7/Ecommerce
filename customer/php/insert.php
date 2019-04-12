@@ -12,5 +12,5 @@
   $sql = "INSERT INTO customers(Cust_ID, First_name, Last_name, Address, City, State, Phone, Email) VALUES ('$custid', '$firstname', '$lastname', '$address', '$city', '$state', '$phone', '$email');";
   $result = mysqli_query($conn, $sql);
   
-  header("Location: /Ecommerce/customer/customer_HomePage.html");
+  header("Location: /Ecommerce/customer/customer.html");
 ?>

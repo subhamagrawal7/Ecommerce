@@ -31,7 +31,7 @@
     <div class="container">
       <h1 class="display-1">ADD Customer...</h1>
       <br />
-      <form action="./php/insert.php" method="post">
+      <form action="./php/insert.php" method="post" onsubmit="return formValidate(event)">
         <div class="form-group row">
           <label for="customerid" class="col-sm-2 col-form-label"
             >Enter customer id:</label
@@ -43,6 +43,7 @@
               class="form-control"
               id="customerid"
               placeholder="Customer ID"
+              required
             />
           </div>
         </div>
@@ -58,6 +59,7 @@
               class="form-control"
               id="fname"
               placeholder="First Name"
+              required
             />
           </div>
         </div>
@@ -88,6 +90,7 @@
               class="form-control"
               id="Address"
               placeholder="Address"
+              required
             />
           </div>
         </div>
@@ -116,6 +119,7 @@
               class="form-control"
               id="State"
               placeholder="State"
+              required
             />
           </div>
         </div>
@@ -131,6 +135,7 @@
               class="form-control"
               id="Phone"
               placeholder="Phone Number"
+              required
             />
           </div>
         </div>
@@ -146,28 +151,23 @@
               class="form-control"
               id="Email"
               placeholder="Email"
+              required
             />
           </div>
         </div>
 
         <div class="form-group row">
           <div class="col-sm-10">
-            <button
+            <input
               type="submit"
               name="submit"
               class="btn btn-primary"
-              onclick="clickAlert()"
+              value="SUBMIT"
             >
-              ADD USER
-            </button>
           </div>
         </div>
 
-        <script>
-          function clickAlert() {
-            alert("The Data has been added!");
-          }
-        </script>
+        <script src="./../js/customer.js"></script>
       </form>
     </div>
   </body>
