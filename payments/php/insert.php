@@ -6,5 +6,5 @@
   $sql = "INSERT INTO payments(Pay_ID,Pay_type) VALUES ('$payID', '$payType');";
   $result = mysqli_query($conn, $sql);
   
-  header("Location: /Ecommerce/payments/payments.html");
+  header("Location: /Ecommerce/payments/payment.html");
 ?>

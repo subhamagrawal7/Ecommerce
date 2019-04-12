@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
+  <script src='./../../js/updatepay.js' type="text/javascript"></script>
   </body>
 </html>
     <?php
@@ -51,14 +52,14 @@
 
     $output = "";
     $output .= "<div class='container'><h1 class='display-1'>UPDATE Payments...</h1>
-                <br><form method='post'>";
+                <br><form method='post' onsubmit='return formValidate(event)'>";
 
     foreach ($row as $key => $value) {
         //echo $key;
         $output .="<div class='form-group row'><label for='$key' class='col-sm-2 col-form-label'>".htmlentities($key).": </label>";
         $temp = htmlentities($key === 'Pay_ID' ? 'readonly' : null);
         //echo var_dump($temp);
-        $output .="<div class='col-sm-10'><input type='text' name='$key' class='form-control' value='$value' $temp/></div>";
+        $output .="<div class='col-sm-10'><input type='text' name='$key' id='$key' required class='form-control' value='$value' $temp/></div>";
         $output .="</div>";
     }
     $output .="<div class='form-group row'><div class='col-sm-10'><input type='submit' name='submit' value='Submit' class='btn btn-primary'></div></div>";
@@ -69,7 +70,7 @@
     <form action=" /Ecommerce/payments/php/update.php">
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" name="return" class="btn btn-primary" onclick=" /Ecommerce/payments/php/update.php">Return</button>
+            <input type="submit" name="return" class="btn btn-primary"  value="Return">        
         </div>
     </div>
     </form>

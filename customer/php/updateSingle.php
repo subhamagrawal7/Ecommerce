@@ -14,7 +14,7 @@
     
   </head>
   <body>
-  <script src='./../../js/updatecust.js' type="text/javascript"></script>
+  <script src='./../../js/updatepay.js' type="text/javascript"></script>
   </body>
 </html>
     <?php

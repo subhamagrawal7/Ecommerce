@@ -29,7 +29,7 @@ $success = "User successfully deleted";
 echo $success;
 ?>
 
-<form action="../customer.html">
+<form action="../supplier.html">
 <div class="form-group row">
     <div class="col-sm-10">
         <button type="submit" name="return" onclick="../supplier.html" class="btn btn-primary">Return</button>

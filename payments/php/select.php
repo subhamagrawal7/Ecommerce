@@ -57,10 +57,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
       {$output .= "<td>".htmlentities($row['Pay_type']). "</td>";}
     $output .= "</tr>";
   }
-  $output .= "</tbody></table><br><form action='../payments.html'>
+  $output .= "</tbody></table><br><form action='../payment.html'>
   <div class='form-group row'>
     <div class='col-sm-10'>
-      <button type='submit' class='btn btn-primary' name='return' onclick='../payments.html'>Return</button>
+      <button type='submit' class='btn btn-primary' name='return' onclick='../payment.html'>Return</button>
     </div>
   </div>
 </form></div>";

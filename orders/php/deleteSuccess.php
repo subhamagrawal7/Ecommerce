@@ -29,7 +29,7 @@ $success = "Order successfully deleted";
 echo $success;
 ?>
 
-<form action="../customer.html">
+<form action="../orders.html">
 <div class="form-group row">
     <div class="col-sm-10">
         <button type="submit" name="return" onclick="../orders.html" class="btn btn-primary">Return</button>
