@@ -52,7 +52,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
           {$output .= "<th scope='col'>".'Phone'. "</th>";}
           if ($row['Email'] != NULL)
           {$output .= "<th scope='col'>".'Email'. "</th>";}
-          $output .=  "<th scope='col'>".'Delete'."</th>";
+          $output .=  "<th scope='col'>".'Edit'."</th>";
           $output .= "</tr>";
           $temp = 0;
         }
