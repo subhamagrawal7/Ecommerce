@@ -23,17 +23,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/Ecommerce/php/dbh.php";
 $id = $_GET['id'];
 $id = (int)$id;
 //echo var_dump($id);
-$sql = "DELETE FROM products WHERE Prod_ID = $id";
+$sql = "DELETE FROM orders WHERE Order_ID = $id";
 $result = mysqli_query($conn, $sql);
-$success = "Product successfully deleted";
+$success = "Order successfully deleted";
 echo $success;
 ?>
-
 
 <form action="../customer.html">
 <div class="form-group row">
     <div class="col-sm-10">
-        <button type="submit" name="return" onclick="../products.html" class="btn btn-primary">Return</button>
+        <button type="submit" name="return" onclick="../orders.html" class="btn btn-primary">Return</button>
     </div>
 </div>
 </form>

@@ -31,7 +31,7 @@
     <div class="container">
       <h1 class="display-1">ADD Product...</h1>
       <br />
-      <form action="./php/insert.php" method="post">
+      <form action="./php/insert.php" method="post" onsubmit="return formValidate(event)">
         <div class="form-group row">
           <label for="productid" class="col-sm-2 col-form-label"
             >Enter Product id:</label
@@ -43,6 +43,7 @@
               class="form-control"
               id="productid"
               placeholder="Product ID"
+              required
             />
           </div>
         </div>
@@ -58,6 +59,7 @@
               class="form-control"
               id="pname"
               placeholder="Product Name"
+              required
             />
           </div>
         </div>
@@ -73,6 +75,7 @@
               class="form-control"
               id="prodPrice"
               placeholder="Product Price"
+              required
             />
           </div>
         </div>
@@ -88,6 +91,7 @@
               class="form-control"
               id="supplID"
               placeholder="Supplier ID"
+              required
             />
           </div>
         </div>
@@ -103,28 +107,22 @@
               class="form-control"
               id="pCategory"
               placeholder="Product Category"
+              required
             />
           </div>
         </div>
 
         <div class="form-group row">
           <div class="col-sm-10">
-            <button
-              type="submit"
-              name="submit"
-              class="btn btn-primary"
-              onclick="clickAlert()"
+            <input
+            type="submit"
+            name="submit"
+            class="btn btn-primary"
+            value="ADD PRODUCT"
             >
-              ADD PRODUCT
-            </button>
           </div>
         </div>
-
-        <script>
-          function clickAlert() {
-            alert("The Data has been added!");
-          }
-        </script>
+        <script src="./../js/product.js"></script>
       </form>
     </div>
   </body>

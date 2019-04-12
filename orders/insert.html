@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Add Supplier</title>
+    <title>Add Order</title>
     <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -29,147 +29,133 @@
 
   <body>
     <div class="container">
-      <h1 class="display-1">ADD Supplier...</h1>
+      <h1 class="display-1">ADD Order...</h1>
       <br />
       <form action="./php/insert.php" method="post" onsubmit="return formValidate(event)">
         <div class="form-group row">
-          <label for="customerid" class="col-sm-2 col-form-label"
-            >Enter supplier id:</label
+          <label for="productid" class="col-sm-2 col-form-label"
+            >Enter Order id:</label
           >
           <div class="col-sm-10">
             <input
               type="number"
-              name="supplid"
+              name="orderid"
               class="form-control"
-              id="supplierid"
-              placeholder="Supplier ID"
+              id="orderid"
+              placeholder="Order ID"
               required
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="fname" class="col-sm-2 col-form-label"
-            >Enter First Name:</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="text"
-              name="firstName"
-              class="form-control"
-              id="fname"
-              placeholder="First Name"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="lname" class="col-sm-2 col-form-label"
-            >Enter Last Name:</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="text"
-              name="lastName"
-              class="form-control"
-              id="lname"
-              placeholder="Last Name"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="Address" class="col-sm-2 col-form-label"
-            >Enter Address:</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="text"
-              name="address"
-              class="form-control"
-              id="Address"
-              placeholder="Address"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="City" class="col-sm-2 col-form-label">Enter City:</label>
-          <div class="col-sm-10">
-            <input
-              type="text"
-              name="city"
-              class="form-control"
-              id="City"
-              placeholder="City"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="State" class="col-sm-2 col-form-label"
-            >Enter State:</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="text"
-              name="state"
-              class="form-control"
-              id="State"
-              placeholder="State"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="Phone" class="col-sm-2 col-form-label"
-            >Enter Phone No:</label
+          <label for="productid" class="col-sm-2 col-form-label"
+            >Enter Customer id:</label
           >
           <div class="col-sm-10">
             <input
               type="number"
-              name="phone"
+              name="custid"
               class="form-control"
-              id="Phone"
-              placeholder="Phone Number"
+              id="custid"
+              placeholder="Customer ID"
               required
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="Email" class="col-sm-2 col-form-label"
-            >Enter Email:</label
+          <label for="productid" class="col-sm-2 col-form-label"
+            >Enter Product id:</label
           >
           <div class="col-sm-10">
             <input
-              type="email"
-              name="email"
+              type="number"
+              name="prodid"
               class="form-control"
-              id="Email"
-              placeholder="Email"
+              id="prodid"
+              placeholder="Product ID"
               required
             />
           </div>
         </div>
 
         <div class="form-group row">
-            <div class="col-sm-10">
+          <label for="prodPrice" class="col-sm-2 col-form-label"
+            >Enter Order Price:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              name="orderPrice"
+              class="form-control"
+              id="orderPrice"
+              placeholder="Order Price"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="prodPrice" class="col-sm-2 col-form-label"
+            >Enter Quantity:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              name="quantity"
+              class="form-control"
+              id="quantity"
+              placeholder="Quantity"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="prodPrice" class="col-sm-2 col-form-label"
+            >Enter Order Date:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="date"
+              name="orderDate"
+              class="form-control"
+              id="orderDate"
+              placeholder="Order Date"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="supplID" class="col-sm-2 col-form-label"
+            >Enter Payment ID:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              name="payID"
+              class="form-control"
+              id="payID"
+              placeholder="Payment ID"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
               <input
-                type="submit"
-                name="submit"
-                class="btn btn-primary"
-                value="ADD SUPPLIER"
-              >
-            </div>
+              type="submit"
+              name="submit"
+              class="btn btn-primary"
+              value="ADD ORDER"
+            >
           </div>
+        </div>
+        <script src="./../js/order.js"></script>
       </form>
-      <script src="./../js/supplier.js"></script>
     </div>
   </body>
 </html>

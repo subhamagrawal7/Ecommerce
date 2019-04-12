@@ -9,5 +9,5 @@
   $sql = "INSERT INTO products(Prod_ID, Prod_name, Prod_price, Suppl_ID, Category) VALUES ('$prodid', '$prodname', '$prodPrice', '$supplid', '$prodCat');";
   $result = mysqli_query($conn, $sql);
   
-  header("Location: /Ecommerce/product/product_HomePage.html");
+  header("Location: /Ecommerce/product/products.html");
 ?>
